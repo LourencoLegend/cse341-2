@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
 const mongodb = require('./db/connect');
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 
-app.use('/', require('./routes'))// http://localhost:3000
+app.use('/', require('./routes'))// http://localhost:8080
 
 mongodb.initDb((err, mongodb) => {
   if (err) {
